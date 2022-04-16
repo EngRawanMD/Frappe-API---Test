@@ -1,0 +1,369 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "5a4b5804-869d-4bc5-a000-2aadaddb57b3",
+        "name": "Frappe API"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\"lead_name\":\"Lead CO\"}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "restaurant.partner-cons.com",
+              "path": "/api/resource/Lead"
+            },
+            "id": "3b08bf1e-63a5-42cc-9472-1985002e61f2",
+            "name": "Create",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "token 924298b1057b401:f74f378577e4fdc"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "enabled": true,
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+              "name": "DELETE"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "restaurant.partner-cons.com",
+              "path": "/api/resource/Lead/test delete"
+            },
+            "id": "1846afce-22cd-421d-bac2-1c3256156787",
+            "name": "Delete",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "token 924298b1057b401:f74f378577e4fdc"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "enabled": true,
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "restaurant.partner-cons.com",
+              "path": "/api/resource/Lead"
+            },
+            "id": "d1179864-2d07-429c-92e5-9bde3b9d488c",
+            "name": "Query",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "token 924298b1057b401:f74f378577e4fdc"
+              },
+              {
+                "name": "",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "fields",
+                    "value": "[\"first_name\",\"employment_type\",\"status\",\"company\"]"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "filters",
+                    "value": "[[\"Employee\",\"first_name\",\"like\",\"%moh%\"]]"
+                  }
+                ]
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "restaurant.partner-cons.com",
+              "path": "/api/resource/Employee"
+            },
+            "id": "8f415587-a2bd-4bfb-abfa-78000010e54e",
+            "name": "Query with filter",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "token 924298b1057b401:f74f378577e4fdc"
+              },
+              {
+                "enabled": true,
+                "name": "",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+              "name": "PUT"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\"contact_date\":\"2022-10-08\",\"source\":\"Supplier Reference\"}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "restaurant.partner-cons.com",
+              "path": "/api/resource/Lead/Lead test API-Lead"
+            },
+            "id": "22f48c71-63ba-4eb9-bcf1-33c8fca51dfa",
+            "name": "Update",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": "token 924298b1057b401:f74f378577e4fdc"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "enabled": true,
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\"usr\":\"rawanmd789@gmail.com\" , \"pwd\":\"Rowad.123456\"}"
+            },
+            "uri": {
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "restaurant.partner-cons.com",
+              "path": "/api/method/login"
+            },
+            "id": "44e7580a-5a06-4acb-aac8-2ed1db8813ff",
+            "name": "login",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Accept",
+                "value": "application/json"
+              },
+              {
+                "enabled": true,
+                "name": "usr",
+                "value": "rawanmd789@gmail.com"
+              },
+              {
+                "enabled": true,
+                "name": "pwd",
+                "value": "Rowad.123456"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "restaurant.partner-cons.com",
+              "path": "/api/method/frappe.auth.get_logged_user"
+            },
+            "id": "961e9423-d2c9-4575-8b1d-b627aadecf20",
+            "name": "login via token",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Authorization",
+                "value": "token 924298b1057b401:f74f378577e4fdc"
+              },
+              {
+                "name": "Content-Type",
+                "value": " application/json"
+              },
+              {
+                "name": "Accept",
+                "value": "application/json"
+              },
+              {
+                "name": "usr",
+                "value": "rawanmd789@gmail.com"
+              },
+              {
+                "name": "pws",
+                "value": "Rowad.123456"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
